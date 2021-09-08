@@ -37,22 +37,18 @@ This will help you to pass the CCDAK exam.
     1. Message is a simple array of bytes to Kafka without any specific format.
     1. A key is an optional metadata of a message. Similar to the message, for Kafka, it is a array of bytes.
     1. By using a key & consistent hashing, Kafka makes sure that messages with the same key are always written in the same partition (unless partition count does not change).
-
 1. Schemas
     1. Allows to keep data type-safe.
     1. Allows applications to be more decoupled & standardized.
-
-3. Topics & Partitions
+1. Topics & Partitions
     1. Each topic can have multiple partitions.
     1. Data time ordering is only guaranteed in a  partition.
     1. Partitions can be spread across servers, but each one has only one leader.
-
-4. Producers & Consumers
+1. Producers & Consumers
     1. By default, producer will balance out message across partitions using round robin. However, this can be altered to ask a producer to write in specific partitions based on conditions.
     1. Consumers keep the offset of what has been consumed either in ZooKeeper or Kafka itself.
     1. Consumer groups allow to scale horizontally & make sure that only one consumer in the group consumes the message.
-
-5. Brokers & clusters
+1. Brokers & clusters
     1. Each server acts a broker.
     1. One broker in a cluster will act as the controller for administrative tasks.
     1. Default retention for messages is 7 days.
